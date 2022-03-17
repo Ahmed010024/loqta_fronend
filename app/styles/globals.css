@@ -1,0 +1,917 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+body {
+  direction: rtl;
+  overflow-x: hidden;
+  text-align: right;
+  font-family: "Tajawal", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+::placeholder {
+  color: #bbb;
+  opacity: 1;
+}
+
+.topheader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #7F7F7F;
+  color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  z-index: 9;
+  padding: 6px 0;
+}
+.topheader .topHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.topheader .topHeaderContent p {
+  margin: 0;
+  font-size: 16px;
+}
+.topheader .topHeaderContent button {
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  padding: 4px 10px;
+  background: #232323;
+  box-shadow: rgba(0, 0, 0, 0.28) 1px 1px 3px;
+}
+
+.navbar {
+  padding: 5px 0px 15px 0;
+  transition: 0.3s;
+  width: 100%;
+  z-index: 8;
+  margin-top: 46px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.navbar .navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+.navbar .navbar-brand div {
+  display: flex;
+  width: 140px;
+}
+.navbar .navbar-brand div svg {
+  width: 100%;
+  height: 75px;
+}
+.navbar .language .lang-link {
+  color: #bbb;
+  font-size: 14px;
+  margin-right: 10px;
+  position: relative;
+}
+.navbar .language .lang-link:first-child {
+  padding-left: 15px;
+}
+.navbar .language .lang-link:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 70%;
+  width: 1px;
+  background: #bbb;
+}
+.navbar .language .lang-link:last-child {
+  color: #722b8b !important;
+  cursor: pointer;
+}
+.navbar .nav-link {
+  color: #722b8b !important;
+  font-weight: 400;
+  margin-right: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 14px;
+}
+.navbar .navLeft button {
+  padding: 5px 10px;
+  margin-right: 15px;
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+  height: 35px;
+}
+.navbar .navLeft button:focus {
+  outline: none;
+}
+.navbar .navLeft button svg {
+  margin-left: 10px;
+}
+.navbar .navLeft .profile {
+  border: 1px solid #eee;
+  background: #fff;
+  color: #722b8b !important;
+}
+.navbar .navLeft .user svg {
+  margin-right: 5px;
+  margin-left: 0px !important;
+}
+.navbar .navLeft .addCart {
+  background: #722b8b;
+  color: #fff;
+  border: 0;
+}
+.navbar .navLeft .addCart:active {
+  transform: scale(0.9);
+}
+
+.userMenu {
+  position: relative;
+}
+.userMenu .dropdown-menu {
+  overflow: hidden;
+}
+.userMenu .dropdown-menu button {
+  margin-right: 0;
+}
+.userMenu .dropdown-menu .dropdown-item.active, .userMenu .dropdown-menu .dropdown-item:active {
+  color: #722b8b;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.userMenuOpen {
+  display: block;
+}
+
+.categSection {
+  background: #f7f7f7;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0 20px;
+}
+.categSection .categContent .searchBox {
+  padding: 18px 15px 30px 15px;
+  border-radius: 4px;
+  background: #722b8b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categSection .categContent .searchBox .inputBox {
+  position: relative;
+  border-radius: 4px;
+  flex: 1;
+  margin-left: 3rem;
+}
+.categSection .categContent .searchBox .inputBox input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 5px 35px 5px 0;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.categSection .categContent .searchBox .inputBox svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+}
+.categSection .categContent .searchBox button {
+  background: #5f2275;
+  border: none;
+  outline: none;
+  height: 35px;
+  color: #fff;
+  padding: 0 25px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.categSection .categContent .searchBox button svg {
+  margin-left: 10px;
+}
+.categSection .categContent .searchBox button:hover {
+  opacity: 0.6;
+}
+.categSection .categContent .categBoxs .categBox {
+  margin: 1rem 0;
+}
+.categSection .categContent .categBoxs .categBox a {
+  display: flex;
+  align-items: center;
+}
+.categSection .categContent .categBoxs .categBox .catedIco {
+  min-height: 45px;
+  min-width: 45px;
+  background: #f89728;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+.categSection .categContent .categBoxs .categBox span {
+  font-size: 16px;
+  margin-right: 15px;
+  color: #722b8b !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ads {
+  padding: 2rem 0;
+}
+.ads h3 {
+  font-size: 20px;
+}
+.ads .showMore {
+  margin: 1rem 0;
+}
+
+.adsBox {
+  margin-top: 2rem;
+  box-shadow: 0 3px 5px #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.adsBox .starBtn {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  background: none;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+}
+.adsBox .starBtn:active {
+  transform: scale(0.9);
+}
+.adsBox .starBtn svg {
+  font-size: 22px;
+  color: #d4d4d4;
+}
+.adsBox .starBtn.fill svg {
+  color: #FFA500;
+}
+.adsBox .adMenu {
+  position: relative;
+}
+.adsBox .adMenuBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  padding: 2px 5px;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.adsBox .adMenuBtn:active {
+  transform: scale(0.9);
+}
+.adsBox .adMenuBtn svg {
+  font-size: 22px;
+  color: #722b8b;
+}
+.adsBox .adsBoxImg {
+  height: 230px;
+  background-size: cover;
+}
+.adsBox .adsBoxContent {
+  padding: 15px;
+}
+.adsBox .adsBoxContent a {
+  display: block;
+  margin: 5px 0 0;
+  font-weight: 500;
+}
+.adsBox .adsBoxContent .price {
+  font-size: 18px;
+  font-weight: 600;
+}
+.adsBox .adsBoxContent .categ {
+  margin-top: 0.6rem;
+  margin-bottom: 10px;
+}
+.adsBox .adsBoxContent .categ span {
+  display: inline-block;
+  font-size: 15px;
+}
+.adsBox .adsBoxContent .categ .categSpan {
+  margin: 0 5px;
+}
+.adsBox .adsBoxContent p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.adsBox .boxFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.adsBox:hover {
+  box-shadow: 0 3px 10px 3px #cccccc;
+}
+.adsBox:hover .adMenuBtn {
+  opacity: 1;
+}
+
+.cardSettingsMenu {
+  background: #fff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  width: fit-content;
+  z-index: 1;
+  border-radius: 4px;
+  right: 12px;
+  top: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.cardSettingsMenu button {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: right;
+  color: #989898;
+  transition: 0.3s;
+  padding: 5px 10px;
+}
+.cardSettingsMenu button svg {
+  font-size: 16px;
+  margin-left: 10px;
+}
+.cardSettingsMenu button:hover {
+  color: #636363;
+}
+
+.footer {
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  padding-bottom: 4rem;
+}
+.footer .footerDis {
+  padding: 15px 0;
+  border-top: 1px solid #e3e3e3;
+  display: flex;
+}
+.footer .footerDis .footerDisContent {
+  border-left: 1px solid #dddcda;
+  padding-left: 20px;
+}
+.footer .footerDis .footerDisContent p {
+  font-size: 15px;
+}
+.footer .footerDis .facebookFollow {
+  margin-right: 20px;
+  display: flex;
+  direction: ltr;
+  align-items: center;
+}
+.footer .footerDis .facebookFollow div {
+  width: 130px;
+  height: 56px;
+}
+.footer .footerDis .facebookFollow button {
+  width: 100px;
+  background: #1877f2;
+  border: 0;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.footer .footerDis .facebookFollow button svg {
+  margin-right: 5px;
+}
+.footer .footerCateg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  border-top: 1px solid #e3e3e3;
+}
+.footer .footerCateg h3 {
+  font-size: 16px;
+  color: #737373;
+  margin: 0;
+  margin-left: 10px;
+}
+.footer .footerCateg a {
+  font-size: 15px;
+  position: relative;
+  padding-left: 10px;
+  color: #232323;
+  transition: 0.2s;
+}
+.footer .footerCateg a:hover {
+  color: #722b8b !important;
+}
+.footer .footerCateg a::after {
+  content: ",";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #737373;
+}
+.footer .footerMain {
+  padding: 15px 0;
+  border-top: 1px solid #e3e3e3;
+}
+.footer .footerMain a {
+  display: block;
+  color: #232323;
+  font-size: 14px;
+}
+.footer .footerMain .contactBar {
+  display: flex;
+  align-items: center;
+}
+.footer .footerMain .contactBar svg {
+  margin-left: 10px;
+}
+
+.backBtn button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+}
+.backBtn button svg {
+  margin-left: 5px;
+}
+
+.pageTop {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.pageTop button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+}
+.pageTop button svg {
+  margin-left: 5px;
+}
+.pageTop .pageRoot {
+  margin-right: 2rem;
+}
+.pageTop .pageRoot a {
+  display: inline-block;
+  color: #737373;
+  font-size: 14px;
+  margin-left: 10px;
+  position: relative;
+}
+.pageTop .pageRoot a:first-child {
+  padding-left: 15px;
+}
+.pageTop .pageRoot a:first-child::after {
+  cursor: default;
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ad .adHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.ad .adHeader .adTitle h3 {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.ad .adHeader .adTitle .adTitleContnet {
+  display: flex;
+  align-items: center;
+}
+.ad .adHeader .adTitle .adTitleContnet a {
+  font-size: 13px;
+  margin-left: 2rem;
+  color: #000;
+  font-weight: 600;
+}
+.ad .adHeader .adTitle .adTitleContnet p {
+  font-size: 14px;
+  margin: 0;
+}
+.ad .adHeader .adPrice {
+  position: relative;
+  border-radius: 8px;
+  background: #f7f6f6;
+  padding: 9px 5px;
+  height: 49px;
+  z-index: 2;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 #fff;
+}
+.ad .adHeader .adPrice span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.ad .adImgage {
+  background: #f7f6f6;
+  text-align: center;
+}
+.ad .adImgage img {
+  width: 100%;
+}
+.ad .adFav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 15px;
+  background: #F8F8F8;
+  border: 1px solid #eee;
+}
+.ad .adFav button {
+  color: #999;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+.ad .adFav button svg {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.ad .adsContent {
+  margin: 2rem 0;
+}
+.ad .adsContent p {
+  font-size: 15px;
+}
+.ad .adsImages {
+  background: #f7f6f6;
+  text-align: center;
+}
+.ad .adViews {
+  border-top: 1px solid #e3e3e3;
+  margin-top: 15px;
+  padding-top: 5px;
+  font-size: 15px;
+}
+.ad .adViews span:last-child {
+  margin-right: 5px;
+  font-weight: 600;
+}
+.ad .adContact {
+  margin-bottom: 2rem;
+  background: #f1f5fc;
+  padding: 10px;
+  border-top: 1px solid #e2e9f4;
+  position: relative;
+}
+.ad .adContact .contactImg {
+  position: absolute;
+  left: 0;
+  top: -25px;
+}
+.ad .adContact .phoneNum {
+  display: flex;
+  align-items: center;
+}
+.ad .adContact .phoneNum svg {
+  font-size: 28px;
+}
+.ad .adContact .phoneNum span {
+  margin: 0 10px;
+  font-size: 22px;
+}
+.ad .adContact .phoneNum a {
+  font-size: 15px;
+}
+.ad .adContact .inputBox {
+  width: 100%;
+  margin-top: 10px;
+}
+.ad .adContact .inputBox input, .ad .adContact .inputBox textarea {
+  border: none;
+  outline: none;
+  padding: 6px;
+  border-radius: 8px;
+}
+.ad .adContact .inputBox input {
+  width: 60%;
+}
+.ad .adContact .inputBox textarea {
+  width: 90%;
+  resize: none;
+}
+.ad .adContact .sentBtn {
+  margin: 10px 0;
+}
+.ad .adContact .sentBtn button {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #722b8b;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.ad .adContact .sentBtn button svg {
+  margin-left: 5px;
+}
+.ad .adSide button {
+  background-color: #168eca;
+  color: #fff;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 6px;
+  padding: 0 10px;
+  text-align: right;
+  font-size: 18px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.ad .adSide button svg {
+  margin-left: 10px;
+}
+.ad .adSide .safetyBox {
+  padding: 12px 10px 5px 17px;
+  background: #f1f5fc;
+}
+.ad .adSide .safetyBox span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.ad .adSide .safetyBox ol {
+  padding-right: 25px;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+.ad .adSide .userBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.ad .adSide .userBox svg {
+  font-size: 38px;
+  color: #737373;
+}
+.ad .adSide .userBox .userData {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.ad .adSide .userBox .userData .userName {
+  font-weight: 600;
+  font-size: 18px;
+}
+.ad .adSide .userBox .userData span {
+  font-size: 15px;
+}
+
+.login {
+  text-align: center;
+}
+.login .loginContent {
+  margin: 2rem 0;
+}
+.login .loginContent h4 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+.login .loginBox {
+  width: 342px;
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.login .loginBox input {
+  width: 100%;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.login .loginBox .remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .loginBox .remember input {
+  width: unset;
+  margin-left: 5px;
+}
+.login .loginBox button {
+  width: 100%;
+  height: 40px;
+  background: #722b8b;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.login .loginBox .formLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login .loginBox .formLinks a {
+  font-size: 13px;
+}
+.login .alert {
+  margin: 2rem 0;
+  display: block;
+  font-size: 14px;
+  color: #9f9e9e;
+}
+
+.signup {
+  text-align: right;
+}
+.signup .signupData {
+  margin-right: 15px;
+}
+.signup .signupData span {
+  color: #737373;
+  display: block;
+  margin-bottom: 5px;
+}
+.signup .agree {
+  font-size: 14px;
+  justify-content: flex-start !important;
+}
+
+.navbar-light .navbar-toggler {
+  outline: none;
+}
+
+.newAd {
+  padding-top: 3rem;
+}
+.newAd .newAdContnet .newTitle {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.newAd .newAdContnet .newAdDate {
+  padding-top: 1rem;
+  width: 60%;
+  margin: auto;
+}
+.newAd .newAdContnet .newAdDate input:focus, .newAd .newAdContnet .newAdDate select:focus, .newAd .newAdContnet .newAdDate textarea:focus {
+  box-shadow: none;
+  border-color: #722b8b;
+}
+.newAd .newAdContnet .newAdDate select {
+  appearance: none;
+}
+.newAd .newAdContnet .newAdDate textarea {
+  resize: none;
+}
+.newAd .newAdContnet .newAdDate .adPhotos {
+  display: flex;
+}
+.newAd .newAdContnet .newAdDate .addPhoto label {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed #e5e5e5;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.newAd .newAdContnet .newAdDate img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.newAd .newAdContnet .adSave {
+  text-align: left;
+  margin: 2rem 0;
+}
+.newAd .newAdContnet .adSave button {
+  padding: 5px 10px;
+  margin-right: 15px;
+  border-radius: 3px;
+  outline: none;
+  font-size: 16px;
+  background: #722b8b;
+  color: #fff;
+  border: 0;
+}
+.newAd .newAdContnet .adSave button:active {
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .topheader .topHeaderContent {
+    font-size: 13px;
+  }
+
+  .navbar {
+    margin-top: 75px;
+  }
+
+  .categBoxs {
+    margin-top: 1rem;
+  }
+  .categBoxs span {
+    font-size: 14px;
+  }
+
+  .categSection .categContent .searchBox {
+    overflow-x: scroll;
+  }
+  .categSection .categContent .searchBox .inputBox {
+    min-width: 260px;
+  }
+  .categSection .categContent .searchBox button {
+    min-width: 125px;
+  }
+
+  .coverAd img {
+    width: 100%;
+  }
+
+  .footer .footerDis {
+    flex-direction: column;
+  }
+  .footer .footerDis .footerDisContent {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .footer .footerDis .facebookFollow {
+    justify-content: center;
+  }
+
+  .adImgage img, .adsImages img {
+    width: 100%;
+  }
+
+  .contactImg {
+    display: none;
+  }
+}
